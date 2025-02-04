@@ -20,7 +20,6 @@ Use your knowledge of object-oriented programming, two-dimensional (2D) arrays, 
 Put and image of your UML Diagram here. Upload the image of your UML Diagram to your repository, then use the Markdown syntax to insert your image here. Make sure your image file name is one work, otherwise it might not properly get display on this README.
 
 ![UML Diagram for my project](https://github.com/user-attachments/assets/dc14b4c5-37d2-47a0-ba2d-a648260325e0)
-.png)
 
 ## Video
 
