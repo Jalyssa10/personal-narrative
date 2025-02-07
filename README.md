@@ -35,7 +35,7 @@ Record a short video of your story to display here on your README. You can do th
 
 ## Story Description
 
-Write a description of the story that your animation showcases. Give addional context for your story here in the case your animation is more abstract and only has images and little text. Lastly, include what data in your project is represented in 2D arrays and how those directly relate to the story your animation showcase.
+My project is about what makes me, me. I first stary off with the Mexican flag and I overlay a thermal filter on top of it. For the second image I have a cross because I'm Catholic and my religion is a big part of my life and I have a color shift flter on top. The 3rd image is Yogurtland's logo because I LOVE Yogurtland and I want to eat it everyday so I used a shapen filter. Lastly my fourth image is a group of people running Cross Country because that's the sport that I've been doing and I really enjoying competing and I overlayed a motion blurred filter. In one of my 2D array I have all of my png's in order of what I wanted to go from first to last, I also have private String, private ImagePlus, private Pixel, public Pizel, and Pixel.
 ## Image Filter Analysis
 
 Choose at least 2 filters uses in your animation to explain how the pixels are modified. If you created a new image filter that was not one of the ones from this unit, make sure to explain and analyze that filter(s) before choosing ones that came from this unit.
