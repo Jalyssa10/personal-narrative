@@ -1,0 +1,54 @@
+import org.code.theater.*;
+import org.code.media.*;
+
+public class MyStory extends Scene {
+  private String[][] imageNames;
+  private ImagePlus[][] images;
+
+  // Constructor
+  public MyStory(String[][] imageNames) {
+    this.imageNames = imageNames;
+    this.images = new ImagePlus[imageNames.length][imageNames[0].length];
+    
+    // Loads all the images
+    for (int i = 0; i < imageNames.length; i++) {
+      for (int l = 0; l < imageNames[i].length; l++) {
+        this.images[i][l] = new ImagePlus(imageNames[i][l]);
+      }
+    }
+  }
+
+  // Plays the first scene with the thermal filter
+  public void drawFirstScene() {
+    clear("white");
+
+    // Plays images with the filters
+    images[0][0].applyThermalFilter();
+    drawImage(images[0][0], 0, 0, 200);
+    pause(1.0);
+
+    images[0][1].adjustContrast(2);
+    drawImage(images[0][1], 200, 0, 200);
+    pause(1.0);
+  }
+
+  // Plays the second scene
+  public void drawSecondScene() {
+    clear("white");
+
+    // Plays images with filter
+    images[1][0].applyThermalFilter();
+    drawImage(images[1][0], 0, 200, 200);
+    pause(1.0);
+
+    images[1][1].adjustContrast(2); 
+    drawImage(images[1][1], 200, 200, 200);
+    pause(1.0);
+  }
+
+  // Plays all the scenes in order
+  public void drawScenes() {
+    drawFirstScene();
+    drawSecondScene();
+  }
+}
