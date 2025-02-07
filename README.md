@@ -31,7 +31,7 @@ Record a short video of your story to display here on your README. You can do th
 - Upload the thumbnail image to your repo.
 - Use the following markdown
 
-[![Thumbnail for my project](https://github.com/user-attachments/assets/b4f7f927-de37-4ca9-b56a-79ae12a6d6c2)](https://youtube.com/shorts/_zDgyFU--c0?feature=share)
+[![Thumbnail for my project](https://github.com/user-attachments/assets/b4f7f927-de37-4ca9-b56a-79ae12a6d6c2)]](https://youtube.com/shorts/_zDgyFU--c0)
 
 ## Story Description
 
