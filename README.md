@@ -35,7 +35,13 @@ Record a short video of your story to display here on your README. You can do th
 
 ## Story Description
 
-My project is about what makes me, me. I first stary off with the Mexican flag and I overlay a thermal filter on top of it. For the second image I have a cross because I'm Catholic and my religion is a big part of my life and I have a color shift flter on top. The 3rd image is Yogurtland's logo because I LOVE Yogurtland and I want to eat it everyday so I used a shapen filter. Lastly my fourth image is a group of people running Cross Country because that's the sport that I've been doing and I really enjoying competing and I overlayed a motion blurred filter. In one of my 2D array I have all of my png's in order of what I wanted to go from first to last, I also have private String, private ImagePlus, private Pixel, public Pizel, and Pixel.
+My project is about what makes me, me. I first stary off with the Mexican flag and I overlay a thermal filter on top of it. For the second image I have a cross because I'm Catholic and my religion is a big part of my life and I have a color shift flter on top. The third image is Yogurtland's logo because I LOVE Yogurtland and I want to eat it everyday so I used a shapen filter. Lastly my fourth image is a group of people running Cross Country because that's the sport that I've been doing and I really enjoying competing and I overlayed a motion blurred filter. In one of my 2D array I have all of my png's in order of what I wanted to go from first to last, I also have private String, private ImagePlus, private Pixel, public Pizel, and Pixel.
 ## Image Filter Analysis
 
-Choose at least 2 filters uses in your animation to explain how the pixels are modified. If you created a new image filter that was not one of the ones from this unit, make sure to explain and analyze that filter(s) before choosing ones that came from this unit.
+Color Shift Filter: 
+
+In this filter the applycolorShift method loops through every pixel in an image. Each pixel increases the red color value by 30, that way it doesn't pass 255. This modifies the color of the image by shifting the red tones in all the pixels.
+
+Thermal Filter:
+
+The applyThermalFilter method adjusts the colors of each pixel by increasing the red value, while decreasing the green and blue values, to make a warmer image. The adjustContrast method changes the brightness of each color (red, green, and blue) in the pixel by multiplying their values by a factor "m", then limits the values to a max of 255.
