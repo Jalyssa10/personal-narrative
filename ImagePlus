@@ -1,0 +1,67 @@
+import org.code.theater.*;
+import org.code.media.*;
+
+public class ImagePlus extends Image {
+
+  private Pixel[][] pixels;
+
+  // Loads the image
+  public ImagePlus(String filename) {
+    super(filename);
+    pixels = getPixelsFromImage();
+  }
+
+  // Returns the pixels
+  public Pixel[][] getPixelsFromImage() {
+    Pixel[][] tempPixels = new Pixel[getHeight()][getWidth()];
+    
+    for (int row = 0; row < tempPixels.length; row++) {
+      for (int col = 0; col < tempPixels[0].length; col++) {
+        tempPixels[row][col] = getPixel(col, row);
+      }
+    }
+
+    return tempPixels;
+  }
+  
+// Applies the thermal filter
+  public void applyThermalFilter() {
+    Pixel[][] pixels = getPixelsFromImage();
+    for (int row = 0; row < pixels.length; row++) {
+      for (int col = 0; col < pixels[row].length; col++) {
+        Pixel currentPixel = pixels[row][col];
+        
+        int newRed = Math.min(currentPixel.getRed() + 50, 255);
+        int newGreen = Math.min(currentPixel.getGreen() - 50, 255);
+        int newBlue = Math.min(currentPixel.getBlue() - 30, 255);
+        
+        currentPixel.setRed(newRed);
+        currentPixel.setGreen(newGreen);
+        currentPixel.setBlue(newBlue);
+      }
+    }
+  }
+
+// Changes the contrast  
+  public void adjustContrast(int m) {
+    Pixel[][] pixels = getPixelsFromImage();
+    for (int row = 0; row < pixels.length; row++) {
+      for (int col = 0; col < pixels[row].length; col++) {
+        Pixel currentPixel = pixels[row][col];
+
+        int newRed = currentPixel.getRed() * m;
+        int newGreen = currentPixel.getGreen() * m;
+        int newBlue = currentPixel.getBlue() * m;
+
+        // Ensuring the color values don't exceed 255
+        newRed = Math.min(newRed, 255);
+        newGreen = Math.min(newGreen, 255);
+        newBlue = Math.min(newBlue, 255);
+
+        currentPixel.setRed(newRed);
+        currentPixel.setGreen(newGreen);
+        currentPixel.setBlue(newBlue);
+      }
+    }
+  }
+}
