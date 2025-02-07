@@ -1,0 +1,47 @@
+import org.code.theater.*;
+import org.code.media.*;
+
+public class thermalFilter extends ImagePlus {
+
+  public thermalFilter(String filename) {
+    super(filename);
+  }
+
+  // Applies the thermal filter to the image
+  public void applyThermalFilter() {
+    Pixel[][] pixels = getPixelsFromImage();
+    for (int row = 0; row < pixels.length; row++) {
+      for (int col = 0; col < pixels[row].length; col++) {
+        Pixel currentPixel = pixels[row][col];
+        int newRed = Math.min(currentPixel.getRed() + 50, 255);
+        int newGreen = Math.min(currentPixel.getGreen() - 50, 255);
+        int newBlue = Math.min(currentPixel.getBlue() - 30, 255);
+        currentPixel.setRed(newRed);
+        currentPixel.setGreen(newGreen);
+        currentPixel.setBlue(newBlue);
+      }
+    }
+  }
+
+  // Changes the contrast/hue
+  public void adjustContrast(int m) {
+    Pixel[][] pixels = getPixelsFromImage();
+    for (int row = 0; row < pixels.length; row++) {
+      for (int col = 0; col < pixels[row].length; col++) {
+        Pixel currentPixel = pixels[row][col];
+
+        int newRed = currentPixel.getRed() * m;
+        int newGreen = currentPixel.getGreen() * m;
+        int newBlue = currentPixel.getBlue() * m;
+
+        newRed = Math.min(newRed, 255);
+        newGreen = Math.min(newGreen, 255);
+        newBlue = Math.min(newBlue, 255);
+
+        currentPixel.setRed(newRed);
+        currentPixel.setGreen(newGreen);
+        currentPixel.setBlue(newBlue);
+      }
+    }
+  }
+}
