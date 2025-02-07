@@ -1,0 +1,12 @@
+import org.code.theater.*;
+import org.code.media.*;
+
+public class sharpenFilter extends ImagePlus {
+  public sharpenFilter(String filename) {
+    super(filename);
+  }
+
+  // Changes the contrast to appear more bold
+  public void applysharpenFilter() {
+  }
+}
